@@ -1,0 +1,252 @@
+/*OLD SCSS FROM WORDPRESS*/
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: black;
+  color: white;
+  text-align: center;
+}
+
+footer{
+  margin-top:18.75em;
+}
+
+table {
+  border: 0;
+  border-spacing: 1em;
+  margin: 1rem auto;
+  width: 30%;
+}
+
+td {
+	border: 0;
+  padding: 1rem 1.2rem;
+}
+td+td{
+  border-left: 1px solid white;
+}
+
+/*First div with logo*/
+.logo {
+/*   width: 9.3em; */
+}
+
+.logoHeader{
+  position: relative;
+/*   background: url("https://www.nemo-studio.pl/wp-content/uploads/2025/02/main_back_1-scaled.jpg") no-repeat center center/cover; */
+	background: url("https://www.nemo-studio.pl/wp-content/uploads/2026/02/main_back_1-scaled.webp") no-repeat center/cover;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.logoHeader .content {
+  /*background: rgba(0, 0, 0, 0.3);*/
+  padding: 1.25em;
+  color: white;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.line {
+  position: relative;
+  width: 0.25em;
+  height: 8.75em;
+  background: white;
+  margin: 1.25em auto;
+}
+
+#line1 {
+  margin-top: 1.25em;
+  margin-bottom: 0;
+}
+
+#line2{
+  width: 0.25em;
+  margin-top: 0;
+  height:0;
+  margin-bottom: 0;
+}
+
+#timelineLastItem{
+  margin-bottom: 0;
+}
+
+.circle {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 22px;
+  height: 22px;
+  background: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  &::before {
+    content: '';
+    width: 16px;
+    height: 16px;
+    background: black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &::after {
+    content: '';
+    width: 8px;
+    height: 8px;
+    background: #ff6e0d;
+    border-radius: 50%;
+    position: absolute;
+  }
+}
+
+/* Second div (photo + continued line) */
+.second-section {
+/*   margin-top: 2.5em; */
+  display: flex;
+   flex-direction: column;
+  align-items: center;
+  padding: 20em 0;
+  background: url("https://www.nemo-studio.pl/wp-content/uploads/2026/02/20260217-grupowe-scaled.jpg") no-repeat center center/cover;
+/*   background-size: contain; */
+}
+
+.third-section {
+  /*margin-top: 5em;*/
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*padding: 200px 0;*/
+  background: url("https://www.nemo-studio.pl/wp-content/uploads/2025/02/main_back_3-scaled.jpg") no-repeat center center/cover;
+}
+
+
+.line-extension {
+  width: 0.125em;
+  height: 6.25em;
+  background: white;
+}
+
+.second-image {
+  width: 80%;
+  max-width: 37.5em;
+  margin-top: 1.25em;
+  border-radius: 0.625em;
+}
+
+/* Main timeline */
+.hero {
+	transform: translate(0, 120%);
+	background-color: rgba(0, 0, 0, 0.5);
+
+  h1 {
+    font-size: 2rem;
+    letter-spacing: 0.125em;
+  }
+
+  p {
+    max-width: 31.25em;
+    margin: 0.625em auto;
+  }
+
+  .btn {
+    background-color: #ff6e0d;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 25px;
+
+    &:hover {
+      background-color: #e65c00;
+    }
+  }
+}
+
+.timeline-section {
+  padding: 2.5em 1.25em;
+
+  h2 {
+    margin-bottom: 0.625em
+  }
+
+  p {
+    max-width: 37.5em;
+    margin: 0 auto 1.875em;
+  }
+}
+
+.timeline {
+  position: relative;
+  max-width: 37.5em;
+  margin: auto;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 0.25em;
+    background-color: white;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .timeline-item {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 1.25em 0;
+    position: relative;
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    .circle {
+      width: 0.9375em;
+      height: 0.9375em;
+      background-color: #ff6e0d;
+      border-radius: 50%;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      top: 0.625em;
+      border: 0.3125em solid black;
+    }
+
+    .content {
+      width: 45%;
+      padding: 0.625em;
+      background-color: black;
+      text-align: left;
+      margin-left: 0.625em;
+
+      h3 {
+        color: #ff6e0d;
+        font-size: 1.2rem;
+      }
+    }
+
+    &:nth-child(even) .content {
+      text-align: right;
+      margin-left: 0;
+      margin-right: 0.625em;
+    }
+  }
+}
